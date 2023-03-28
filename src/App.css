@@ -1,0 +1,265 @@
+body {
+    background-color: #282c34;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.console-Title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-weight: normal;
+}
+
+.Bracket {
+    color: orange;
+    font-size: xx-large;
+    margin: 10px;
+}
+
+.fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+.About {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding: 40px;
+    border: 2px solid orange;
+    border-radius: 8px;
+    background-color: rgba(40, 44, 52, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-out forwards 1s;
+    animation-delay: 1.5s;
+}
+
+.About-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 60%;
+}
+
+.About-body p {
+    margin: 10px;
+    font-weight: normal;
+    color: white;
+    text-align: left;
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards 1s;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.About-body p {
+    margin: 10px;
+    font-weight: normal;
+    color: white;
+    text-align: left;
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards 1s;
+}
+
+.Page-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Page-links p, a {
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Page-links p:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.Page-links p:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.Page-links p:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.No-Bold {
+    font-weight: normal;
+}
+
+.social-Links {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 1s ease-out forwards 2s;
+}
+
+.social-Links * {
+    margin: 10px;
+    color: white;
+}
+.social-Links a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.back-Arrow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: orange;
+    font-size: x-large;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.projects-container {
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    color: white;
+    animation: fade-in 1s ease-out forwards 1.5s;
+    width: 60%;
+    padding: 20px;
+}
+
+/* Add this media query for the App class */
+@media screen and (max-width: 600px) {
+    .App {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+}
+
+/* Add this media query for the About class */
+@media screen and (max-width: 600px) {
+    .About {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+/* Add this media query for the About-body class */
+@media screen and (max-width: 600px) {
+    .About-body {
+        width: 100%;
+    }
+}
+
+/* Update the existing media query for the projects-container class */
+@media screen and (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Update the existing media query for the console-Title class and other related classes */
+@media screen and (max-width: 600px) {
+    .console-Title {
+        font-size: calc(8px + 2vmin);
+    }
+
+    .Bracket {
+        font-size: x-large;
+    }
+
+    .Page-links {
+        flex-direction: column;
+    }
+
+    .Page-links p, a {
+        margin: 5px;
+    }
+
+    .social-Links {
+        flex-direction: column;
+    }
+
+    .social-Links * {
+        margin: 5px;
+    }
+
+    .back-Arrow {
+        font-size: large;
+    }
+}
+
+.project-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.project-item-title {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-item-title:hover {
+    color: #61dafb;
+}
+
+.project-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-item li {
+    margin-left: 20px;
+}
