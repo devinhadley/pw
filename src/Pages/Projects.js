@@ -7,7 +7,7 @@ function Projects(props) {
 
     return (<div className="App">
         <BackArrow setCurrentPage={props.setCurrentPage}/>
-        <header className="console-Title">
+        <header className="console-Title-Padded">
             <p className="Bracket">></p>
             <TypeWriterEffect
                 textStyle={{fontWeight: 'normal'}}
@@ -54,10 +54,22 @@ const projectsData = [
         caption: 'Created desktop software which converts an english-like syntax into web automation code. Allows for the creation of web automation scripts with no programming knowledge.'
     },
     {
+        title: 'MyTar',
+        link: 'https://github.com/devinhadley/mytar',
+        details: ['Languages: c'],
+        caption: 'Created a USTAR adhering file archiver and unarchiver using c. This project was done for CPE 357 (Systems Programming) at Cal Poly.'
+    },
+    {
+        title: 'Systems Programming',
+        link: 'https://github.com/devinhadley/CPE-357',
+        details: ['Languages: c'],
+        caption: 'This repository contains various projects from an infamous course at Cal Poly, Systems Programming. C programming from a system programming perspective within the UNIX environment.'
+    },
+    {
         title: 'Other Projects',
         link: 'https://github.com/devinhadley?tab=repositories',
         details: [],
-        caption: 'Many other projects can be found on my GitHub.'
+        caption: 'Other projects can be found on my GitHub.'
     }
 ];
 
